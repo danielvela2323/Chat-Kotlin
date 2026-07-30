@@ -18,6 +18,6 @@ public class FragmentChats extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chats2, container, false);
+        return inflater.inflate(R.layout.fragment_chats, container, false);
     }
 }
