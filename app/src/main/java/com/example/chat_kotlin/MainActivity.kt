@@ -2,7 +2,6 @@ package com.example.chat_kotlin
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import com.example.chat_kotlin.Fragmentos.FragmentChats
 import com.example.chat_kotlin.Fragmentos.FragmentPerfil
 import com.example.chat_kotlin.Fragmentos.FragmentUsuarios
@@ -20,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         // Fragmento por defecto
         verFragmentoPerfil()
 
-        binding.bottomNV.setOnClickListener { item ->
-            when(item.id){
+        binding.bottomNV.setOnItemSelectedListener { item ->
+            when(item.itemId){
                 R.id.item_perfil->{
                     //Visualizar el fragmento perfil
                     verFragmentoPerfil()
@@ -44,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun verFragmentoPerfil(){
-        binding.tvTitulo.text = "Pefil"
+        binding.tvTitulo.text = "Perfil"
 
         val fragment = FragmentPerfil()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
