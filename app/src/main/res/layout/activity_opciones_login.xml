@@ -9,9 +9,12 @@
     android:gravity="center"
     tools:context=".OpcionesLoginActivity">
 
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icono_chat"
+        android:layout_marginBottom="35dp"/>
 
-
-    
     <com.google.android.material.button.MaterialButton
         android:id="@+id/opcionEmail"
         android:text="@string/opcionEmail"
