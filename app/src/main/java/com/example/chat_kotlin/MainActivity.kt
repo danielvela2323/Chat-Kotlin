@@ -65,9 +65,13 @@ class MainActivity : AppCompatActivity() {
 
         val fragment = FragmentChats()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
+
         fragmentTransaction.replace(binding.fragmentoFL.id, fragment,"Fragment chats")
         fragmentTransaction.commit()
     }
+
+
+
 
 }
 

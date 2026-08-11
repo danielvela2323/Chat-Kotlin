@@ -19,8 +19,7 @@
             android:textStyle="bold"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
         <View
             android:layout_alignParentBottom="true"
             android:background="#ccc"
@@ -45,10 +44,13 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNV"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-1dp"
+        app:menu="@menu/menu_bottom" />
 
 </RelativeLayout>
 
