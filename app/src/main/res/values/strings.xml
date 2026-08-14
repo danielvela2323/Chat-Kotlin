@@ -13,7 +13,7 @@
     <!--  Strings para el Login -->
     <string name="txt_login">Login</string>
     <string name="et_Email">Correo electrónico</string>
-    <string name="et_password">Contraseña</string>
+    <string name="et_Password">Contraseña</string>
     <string name="btn_ingresar">Ingresar</string>
     <string name="txt_no_tienes_cuenta">¿No tienes una cuenta?</string>
     <string name="tv_registrarme">Registrarme</string>
