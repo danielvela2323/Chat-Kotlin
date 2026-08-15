@@ -1,5 +1,6 @@
 package com.example.chat_kotlin
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.chat_kotlin.databinding.ActivityLoginEmailBinding
@@ -16,7 +17,7 @@ class LoginEmailActivity : AppCompatActivity() {
 
         //Evento al hacer clic en "Registrase"
         binding.tvRegistrarme.setOnClickListener {
-
+            startActivity(Intent(applicationContext, RegistroEmailActivity::class.java))
         }
 
 
