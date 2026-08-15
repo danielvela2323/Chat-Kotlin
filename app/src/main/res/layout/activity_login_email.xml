@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="10dp"
-    tools:context=".Fragmentos.LoginEmailActivity">
+    tools:context=".LoginEmailActivity">
 
     <!-- LOGIN -->
     <TextView

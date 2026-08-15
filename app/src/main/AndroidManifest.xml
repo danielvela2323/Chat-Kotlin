@@ -11,8 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatKotlin">
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -23,19 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".OpcionesLoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-
         <activity
-            android:name=".Fragmentos.LoginEmailActivity"
+            android:name=".LoginEmailActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
+        <activity
+            android:name=".RegistroEmailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

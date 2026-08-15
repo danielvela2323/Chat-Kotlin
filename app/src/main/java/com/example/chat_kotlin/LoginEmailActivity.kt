@@ -1,11 +1,7 @@
-package com.example.chat_kotlin.Fragmentos
+package com.example.chat_kotlin
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.chat_kotlin.R
 import com.example.chat_kotlin.databinding.ActivityLoginEmailBinding
 
 class LoginEmailActivity : AppCompatActivity() {
@@ -24,7 +20,6 @@ class LoginEmailActivity : AppCompatActivity() {
         }
 
 
-
-
     }
 }
+
