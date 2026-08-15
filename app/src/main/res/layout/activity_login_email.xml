@@ -37,7 +37,7 @@
 
         <EditText
             android:id="@+id/et_Email"
-            android:text="@string/et_Email"
+            android:hint="@string/et_Email"
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -54,7 +54,7 @@
 
         <EditText
             android:id="@+id/et_Password"
-            android:text="@string/et_Password"
+            android:hint="@string/et_Password"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
