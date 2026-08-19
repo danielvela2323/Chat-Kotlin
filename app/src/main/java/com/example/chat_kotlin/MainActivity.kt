@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         // Implementar boton par acceder
         // Implemetar activity para google
+        // Ver documentacion en Google e investigar como implementar nuevos tipos de menus
+        // con animaciones 
 
 
 
