@@ -1,6 +1,7 @@
 package com.example.chat_kotlin
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
@@ -9,7 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.chat_kotlin.databinding.ActivityRegistroEmailBinding
+import com.google.common.hash.Hasher
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.core.Constants
 
 class RegistroEmailActivity : AppCompatActivity() {
 
@@ -97,9 +101,37 @@ class RegistroEmailActivity : AppCompatActivity() {
     }
 
     private fun actualizarInformacion() {
-        TODO("Not yet implemented")
+        progressDialog.setMessage("Guardando información")
+
+        val uidU = firebaseAuth.uid
+        val nombresU = nombres
+        val emailU = firebaseAuth.currentUser!!.email
+        val tiempoR = Constantes.obtenerTiempo()
+
+        val datosUsuario = HashMap<String, Any>()
+
+        datosUsuario["uid"] = "$uidU"
+        datosUsuario["nombres"] = "$nombresU"
+        datosUsuario["email"] = "$email"
+        datosUsuario["tiempoR"] = "$tiempoR"
+        datosUsuario["proveedor"] = "Email"
+        datosUsuario["estado"] = "Online"
+
+        val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
+        reference.child(uidU!!)
+            .setValue(datosUsuario)
+            .addOnSuccessListener {
+                progressDialog.dismiss()
+                startActivity(Intent(applicationContext, MainActivity::class.java))
+                finishAffinity() // Para que cuando volvamos atras nos no mande al registro, si no directo al menu de apps de telefono
+            }
+            .addOnFailureListener { e ->
+                progressDialog.dismiss()
+                Toast.makeText(this, "Fallo la creacion de la cuenta debido a ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+
+
     }
 
 
 }
-    
