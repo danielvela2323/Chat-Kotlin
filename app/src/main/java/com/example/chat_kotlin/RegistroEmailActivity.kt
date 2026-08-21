@@ -33,12 +33,7 @@ class RegistroEmailActivity : AppCompatActivity() {
 
         binding.btnRegistrar.setOnClickListener {
             validarInformacion()
-
-
-
-
         }
-
 
     }
 
@@ -75,7 +70,7 @@ class RegistroEmailActivity : AppCompatActivity() {
             binding.etRPassword.error = "Repita contraseña"
             binding.etRPassword.requestFocus()
         }
-        else if(password != password){
+        else if(r_password != password){
             binding.etRPassword.error = "Las contraseñas no coinciden"
             binding.etRPassword.requestFocus()
         }
