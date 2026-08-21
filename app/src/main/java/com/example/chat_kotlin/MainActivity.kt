@@ -3,9 +3,6 @@ package com.example.chat_kotlin
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.chat_kotlin.Fragmentos.FragmentChats
-import com.example.chat_kotlin.Fragmentos.FragmentPerfil
-import com.example.chat_kotlin.Fragmentos.FragmentUsuarios
 import com.example.chat_kotlin.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 

@@ -89,9 +89,13 @@ class RegistroEmailActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 actualizarInformacion()
             }
-            .addOnFailureListener { e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "Fallo la creacion de la cuenta debido a ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Fallo la creacion de la cuenta debido a ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
@@ -122,9 +126,12 @@ class RegistroEmailActivity : AppCompatActivity() {
             }
             .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "Fallo la creacion de la cuenta debido a ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Fallo la creacion de la cuenta debido a ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
-
 
     }
 
