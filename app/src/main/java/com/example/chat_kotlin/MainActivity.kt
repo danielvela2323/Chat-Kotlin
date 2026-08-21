@@ -7,7 +7,6 @@ import com.example.chat_kotlin.Fragmentos.FragmentChats
 import com.example.chat_kotlin.Fragmentos.FragmentPerfil
 import com.example.chat_kotlin.Fragmentos.FragmentUsuarios
 import com.example.chat_kotlin.databinding.ActivityMainBinding
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         // Implementar boton par acceder
         // Implemetar activity para google
         // Ver documentacion en Google e investigar como implementar nuevos tipos de menus
-        // con animaciones 
+        // con animaciones
 
 
 

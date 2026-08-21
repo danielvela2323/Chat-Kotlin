@@ -2,6 +2,7 @@ package com.example.chat_kotlin
 
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.util.Patterns
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,6 +28,10 @@ class RegistroEmailActivity : AppCompatActivity() {
 
         binding.btnRegistrar.setOnClickListener {
             validarInformacion()
+
+
+
+
         }
 
 
@@ -43,9 +48,42 @@ class RegistroEmailActivity : AppCompatActivity() {
         email = binding.etEmail.text.toString().trim()
         password = binding.etPassword.text.toString().trim()
         r_password = binding.etRPassword.text.toString().trim()
+
+        if(nombres.isEmpty()){
+            binding.etNombres.error = "Ingrese nombre"
+            binding.etNombres.requestFocus()
+        }
+        else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            binding.etEmail.error = "Correo invalido"
+            binding.etEmail.requestFocus()
+        }
+        else if(email.isEmpty()){
+            binding.etEmail.error = "Ingrese corroe"
+            binding.etEmail.requestFocus()
+        }
+
+        else if(password.isEmpty()){
+            binding.etPassword.error = "Ingrese contraseña"
+            binding.etPassword.requestFocus()
+        }
+        else if(r_password.isEmpty()){
+            binding.etRPassword.error = "Repita contraseña"
+            binding.etRPassword.requestFocus()
+        }
+        else if(password != password){
+            binding.etRPassword.error = "Las contraseñas no coinciden"
+            binding.etRPassword.requestFocus()
+        }
+        else{
+            registrarUsuario()
+        }
+
+
     }
 
+    private fun registrarUsuario() {
+
+    }
+
+
 }
-
-
-
