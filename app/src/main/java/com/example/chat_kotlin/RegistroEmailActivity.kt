@@ -3,6 +3,7 @@ package com.example.chat_kotlin
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -58,7 +59,7 @@ class RegistroEmailActivity : AppCompatActivity() {
             binding.etEmail.requestFocus()
         }
         else if(email.isEmpty()){
-            binding.etEmail.error = "Ingrese corroe"
+            binding.etEmail.error = "Ingrese correo"
             binding.etEmail.requestFocus()
         }
 
@@ -82,8 +83,23 @@ class RegistroEmailActivity : AppCompatActivity() {
     }
 
     private fun registrarUsuario() {
+        progressDialog.setMessage("Creando cuenta")
+        progressDialog.show()
 
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+            .addOnSuccessListener {
+                actualizarInformacion()
+            }
+            .addOnFailureListener { e->
+                progressDialog.dismiss()
+                Toast.makeText(this, "Fallo la creacion de la cuenta debido a ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun actualizarInformacion() {
+        TODO("Not yet implemented")
     }
 
 
 }
+    
