@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 class FragmentPerfil : Fragment() {
 
+    // Comentario: En la importacion de Context se tuvo que importar de forma manual, ya que
+    // el editor importaba otra clase Context proveniente de Firebase, pero es de Android OJO!!
     private lateinit var binding : FragmentPerfilBinding
     private lateinit var mContext : Context
     private lateinit var firebaseAuth: FirebaseAuth
