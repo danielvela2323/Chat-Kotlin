@@ -4,6 +4,7 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.chat_kotlin.databinding.ActivityLoginEmailBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -66,9 +67,26 @@ class LoginEmailActivity : AppCompatActivity() {
         }
 
     }
-
+    //Qued pendiente terminar esta funcion: 4:19
     private fun loguearUsuario() {
-        
+        progressDialog.setMessage("Ingresando")
+        progressDialog.show()
+
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnSuccessListener {
+                progressDialog.dismiss()
+                startActivity(Intent(this, MainActivity::class.java))
+                finishAffinity()
+            }
+            .addOnFailureListener { e->
+                progressDialog.dismiss()
+                Toast.makeText(this, "No se realizó el logeo debido a ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+
+
     }
 
 
