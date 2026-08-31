@@ -67,6 +67,7 @@ class LoginEmailActivity : AppCompatActivity() {
         }
 
     }
+
     //Qued pendiente terminar esta funcion: 4:19
     private fun loguearUsuario() {
         progressDialog.setMessage("Ingresando")

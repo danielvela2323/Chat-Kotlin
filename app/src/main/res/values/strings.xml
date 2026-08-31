@@ -27,6 +27,9 @@
     <!-- Strings para el Fragment Perfil-->
     <string name="btn_CerrarSesion">Cerrar sesión</string>
 
+    <!-- Id de cliente -->
+    <string name="default_web_client_id">351924243555-kngp6d1dcbeur09qvpk9dj4n6hl3e3i0.apps.googleusercontent.com</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
