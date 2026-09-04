@@ -9,14 +9,15 @@ import com.example.chat_kotlin.databinding.ActivityOpcionesLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 
 class OpcionesLoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOpcionesLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var progressDialog: ProgressDialog
-    private lateinit var mGoogleSignClient: ContentProviderClient
-
+    private lateinit var mGoogleSignClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,6 @@ class OpcionesLoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
-        comprobarSesion()
 
         // Autenticacin con Google
         progressDialog = ProgressDialog(this)
@@ -36,13 +36,21 @@ class OpcionesLoginActivity : AppCompatActivity() {
             .requestEmail()
             .build()
         // Revisar esta parte
-       //mGoogleSignClient = GoogleSignIn.getClient(this, gso)
+       mGoogleSignClient = GoogleSignIn.getClient(this, gso)
 
         comprobarSesion()
 
         binding.opcionEmail.setOnClickListener {
             startActivity(Intent(applicationContext, LoginEmailActivity::class.java))
         }
+
+        binding.opcionGoogle.setOnClickListener {
+            iniciarGoogle()
+        }
+    }
+
+    private fun iniciarGoogle() {
+
     }
 
     private fun comprobarSesion() {

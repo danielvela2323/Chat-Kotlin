@@ -66,6 +66,9 @@ dependencies {
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
 
+    // Google Sign-In(Importada manualmente, ya que esta las versiones usadas aqui ya no la traen
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
 
     // Also add the dependencies for the Credential Manager libraries and specify their versions
     implementation("androidx.credentials:credentials:1.3.0")
