@@ -111,7 +111,7 @@ class RegistroEmailActivity : AppCompatActivity() {
 
         datosUsuario["uid"] = "$uidU"
         datosUsuario["nombres"] = "$nombresU"
-        datosUsuario["email"] = "$email"
+        datosUsuario["email"] = "$emailU"
         datosUsuario["tiempoR"] = "$tiempoR"
         datosUsuario["proveedor"] = "Email"
         datosUsuario["estado"] = "Online"

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "351924243555",
+    "firebase_url": "https://chat---kotlin-b422c-default-rtdb.firebaseio.com",
     "project_id": "chat---kotlin-b422c",
     "storage_bucket": "chat---kotlin-b422c.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.chat_kotlin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "351924243555-4qv1u89tf91dt2brkum9kgtqq6n51rk8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chat_kotlin",
+            "certificate_hash": "0e42addbea864b6f42051aece018b30c07652572"
+          }
+        },
+        {
+          "client_id": "351924243555-kngp6d1dcbeur09qvpk9dj4n6hl3e3i0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyASd7PyrsivfOFBs1CeKaGGsYvPzud-uLA"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351924243555-kngp6d1dcbeur09qvpk9dj4n6hl3e3i0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
