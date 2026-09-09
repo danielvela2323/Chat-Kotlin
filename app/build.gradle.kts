@@ -75,7 +75,10 @@ dependencies {
     implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
     implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 
+    // Dependencia para la imagen redonda
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }
+
 
 
 
