@@ -10,7 +10,10 @@ import android.view.ViewGroup
 import com.example.chat_kotlin.OpcionesLoginActivity
 import com.example.chat_kotlin.databinding.FragmentPerfilBinding
 import com.google.firebase.auth.FirebaseAuth
-
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class FragmentPerfil : Fragment() {
 
@@ -37,11 +40,28 @@ class FragmentPerfil : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        cargarInformacion()
+
+
         binding.btnCerrarSesion.setOnClickListener {
             firebaseAuth.signOut()
             startActivity(Intent(mContext, OpcionesLoginActivity::class.java))
             activity?.finishAffinity()
         }
+    }
+
+    private fun cargarInformacion() {
+        val ref = FirebaseDatabase.getInstance().getReference("Usuarios")
+        ref.child("${firebaseAuth.uid}")
+            .addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
     }
 
 
