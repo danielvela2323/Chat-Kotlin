@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.chat_kotlin"
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
         }
     }
@@ -77,6 +77,9 @@ dependencies {
 
     // Dependencia para la imagen redonda
     implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // Dependencia para la lectura de imagenes desde el servidor (Fragment Perfil)
+    implementation("com.github.bumptech.glide:glide:5.0.9")
 }
 
 
