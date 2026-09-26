@@ -42,6 +42,8 @@
     
     <!-- Para EditarInformacion -->
     <string name="Txt_titulo_edit">Editar información</string>
+    <string name="btn_Actualizar">Actualizar</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
