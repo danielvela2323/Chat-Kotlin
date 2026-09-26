@@ -25,6 +25,7 @@
     <string name="btn_Registrar">Registrar</string>
 
     <!-- Strings para el Fragment Perfil-->
+    <string name="btn_ActualizarInfo">Actualizar</string>
     <string name="btn_CerrarSesion">Cerrar sesión</string>
 
     <!-- Id de cliente -->
